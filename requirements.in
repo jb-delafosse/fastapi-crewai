@@ -1,0 +1,10 @@
+black
+mypy
+isort
+typer
+crewai[tools]
+pytest
+requests
+selenium
+unstructured
+langchain-community

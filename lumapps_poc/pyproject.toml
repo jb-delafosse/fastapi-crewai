@@ -1,0 +1,27 @@
+[project]
+name = "lumapps_poc"
+version = "0.1.0"
+description = "lumapps-poc using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.148.0,<1.0.0",
+    "fastapi>=0.111.0,<1.0.0",
+    "uvicorn>=0.30.0,<1.0.0",
+    "pydantic>=2.7.0,<3.0.0"
+]
+
+[project.scripts]
+lumapps_poc = "lumapps_poc.entrypoints.main:run"
+run_crew = "lumapps_poc.entrypoints.main:run"
+train = "lumapps_poc.entrypoints.main:train"
+replay = "lumapps_poc.entrypoints.main:replay"
+test = "lumapps_poc.entrypoints.main:test"
+serve = "lumapps_poc.entrypoints.runner:serve"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
